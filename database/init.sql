@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS ia2_table (
     id INT AUTO_INCREMENT PRIMARY KEY,
     data VARCHAR(255) NOT NULL
 );
-INSERT INTO mytable (data) VALUES ('This is 21BCP110!');
+INSERT INTO ia2_table (data) VALUES ('This is 21BCP110!');

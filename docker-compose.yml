@@ -1,9 +1,9 @@
 version: '3'
 services:
- db:
-    build: ./db
+ database:
+    build: ./database
     environment:
-      MYSQL_ROOT_PASSWORD: ##sim@274315
+      MYSQL_ROOT_PASSWORD: pw
       MYSQL_DATABASE: ia2_db
       MYSQL_USER: iauser
       MYSQL_PASSWORD: 12345
@@ -14,7 +14,7 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - db
+      - database
  frontend:
     build:
       context: ./frontend
