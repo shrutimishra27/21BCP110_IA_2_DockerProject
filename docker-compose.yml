@@ -1,0 +1,23 @@
+version: '3'
+services:
+ db:
+    build: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: ##sim@274315
+      MYSQL_DATABASE: ia2_db
+      MYSQL_USER: iauser
+      MYSQL_PASSWORD: 12345
+    ports:
+      - "3307:3306"
+ backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+ frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../frontend-nginx/Dockerfile
+    ports:
+      - "80:80"

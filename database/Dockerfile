@@ -1,0 +1,8 @@
+FROM mysql:5.7
+
+ENV MYSQL_ROOT_PASSWORD=##sim@274315
+ENV MYSQL_DATABASE=ia2_db
+ENV MYSQL_USER=iauser
+ENV MYSQL_PASSWORD=12345
+
+COPY init.sql /docker-entrypoint-initdb.d/
