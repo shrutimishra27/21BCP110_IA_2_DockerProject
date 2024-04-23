@@ -1,12 +1,9 @@
 # Building Three-Tier Application using Docker
 
----
-
 ## Introduction to Docker
 
 Docker is a platform for developing, shipping, and running applications in containers, providing a consistent environment across different systems. It allows you to package your software and its dependencies into a standardized unit for easy deployment.
 
----
 
 ## Dockerizing my Three-Tier Application
 
@@ -110,6 +107,3 @@ ENV MYSQL_PASSWORD=12345
 # Copy the init.sql script to be executed during database initialization
 COPY init.sql /docker-entrypoint-initdb.d/
 ```
-
-
-## Thank You
